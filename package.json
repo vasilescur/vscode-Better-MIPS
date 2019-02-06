@@ -1,0 +1,25 @@
+{
+    "name": "mips",
+    "displayName": "Better MIPS",
+    "description": "Better syntax highlighting support for MIPS assembly language.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "mips",
+            "aliases": ["MIPS", "mips"],
+            "extensions": [".s",".mips",".asm",".spim"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "mips",
+            "scopeName": "source.mips",
+            "path": "./syntaxes/mips.tmLanguage"
+        }]
+    }
+}

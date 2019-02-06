@@ -1,23 +1,9 @@
-# MIPS Support
+# Better MIPS Support
 
 ## Features
-This VSCode extension provides basic MIPS colorization and snippets support.
+This VSCode extension provides better MIPS colorization and snippets support.
 
-### Colors
-![colors](images/vscode-mips-colors.png)
+## Colors
+The extension comes with a color theme called `Nord MIPS`, based on the very popular [Nord](https://github.com/arcticicestudio/nord) color pallete / theme.
 
-### Snippets
-![snippets](images/vscode-mips-snippets.png)
-
-The extension is based on Textmate's [MIPS bundle](https://github.com/textmate/mips.tmbundle)
-
-## Release Notes
-
-### 0.0.2
-
-* Add syntax for singly-quoted characters
-* Switch svg logo to png
-
-### 0.0.1
-
-Initial release
+The extension is based on [this](https://github.com/kdarkhan/vscode-mips-support) more limited one.

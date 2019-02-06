@@ -4,7 +4,7 @@
     "description": "Provides better syntax highlighting and snippets for MIPS assembly language",
     "version": "0.1.0",
     "publisher": "vasilescur",
-    "icon": "./images/logo.png",
+    "icon": "images/logo.png",
     "homepage": "https://github.com/vasilescur/vscode-mips-support",
     "repository": {
         "type": "git",

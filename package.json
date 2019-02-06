@@ -5,13 +5,13 @@
     "version": "0.2.0",
     "publisher": "vasilescur",
     "icon": "images/logo.png",
-    "homepage": "https://github.com/vasilescur/vscode-mips-support",
+    "homepage": "https://github.com/vasilescur/vscode-Better-MIPS",
     "repository": {
         "type": "git",
-        "url": "https://github.com/vasilescur/vscode-mips-support"
+        "url": "https://github.com/vasilescur/vscode-Better-MIPS"
     },
     "bugs": {
-        "url": "https://github.com/vasilescur/vscode-mips-support/issues",
+        "url": "https://github.com/vasilescur/vscode-Better-MIPS/issues",
         "email": "vasilescur@gmail.com"
     },
     "engines": {

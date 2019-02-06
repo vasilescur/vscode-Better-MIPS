@@ -15,20 +15,64 @@
 	<string>MIPS Assembler</string>
 	<key>patterns</key>
 	<array>
+
+	<!--
+
+	List of possible names:
+	
+	Instructions:
+		support.function.arithmetic.mips
+		support.function.registers.mips
+		support.function.jumps.mips
+		support.function.mips	
+
+	Directives:
+		storage.type.mips
+		storage.modifier.mips
+
+	labels:
+		meta.function.label.mips
+
+	Registers:
+		variable.other.register.usable.by-number.mips
+		variable.other.register.usable.by-name.general.mips
+		variable.other.register.usable.by-name.mips
+		variable.other.register.usable.floating-point.mips
+		variable.other.register.reserved.mips
+
+	-->
+
+
+		<!-- Instructions -->
 		<dict>
-			<key>comment</key>
-			<string>ok actually this are instructions, but one also could call them funtions…</string>
 			<key>match</key>
-			<string>\b(mul|abs|div|divu|mulo|mulou|neg|negu|not|rem|remu|rol|ror|li|seq|sge|sgeu|sgt|sgtu|sle|sleu|sne|b|beqz|bge|bgeu|bgt|bgtu|ble|bleu|blt|bltu|bnez|la|ld|ulh|ulhu|ulw|sd|ush|usw|move|mfc1\.d|l\.d|l\.s|s\.d|s\.s)\b</string>
+			<string>\b(mul|abs|div|divu|mulo|mulou|neg|negu|not|rem|remu|rol|ror|abs\.d|abs\.s|add|add\.d|add\.s|addi|addiu|addu|and|andi|ceil\.w\.d|ceil\.w\.s|div|div\.d|div\.s|divu|eret|floor\.w\.d|floor\.w\.s|mul|mul\.d|mul\.s|mult|multu|neg\.d|neg\.s|nop|nor|or|ori|round\.w\.d|round\.w\.s|sll|sllv|slt|slti|sltiu|sltu|sqrt\.d|sqrt\.s|sra|srav|srl|srlv|sub|sub\.d|sub\.s|subu|trunc\.w\.d|trunc\.w\.s|xor|xori)\b</string>
 			<key>name</key>
-			<string>support.function.pseudo.mips</string>
+			<string>support.function.arithmetic.mips</string>
 		</dict>
+
 		<dict>
 			<key>match</key>
-			<string>\b(abs\.d|abs\.s|add|add\.d|add\.s|addi|addiu|addu|and|andi|bc1f|bc1t|beq|bgez|bgezal|bgtz|blez|bltz|bltzal|bne|break|c\.eq\.d|c\.eq\.s|c\.le\.d|c\.le\.s|c\.lt\.d|c\.lt\.s|ceil\.w\.d|ceil\.w\.s|clo|clz|cvt\.d\.s|cvt\.d\.w|cvt\.s\.d|cvt\.s\.w|cvt\.w\.d|cvt\.w\.s|div|div\.d|div\.s|divu|eret|floor\.w\.d|floor\.w\.s|j|jal|jalr|jr|lb|lbu|lh|lhu|ll|lui|lw|lwc1|lwl|lwr|madd|maddu|mfc0|mfc1|mfhi|mflo|mov\.d|mov\.s|movf|movf\.d|movf\.s|movn|movn\.d|movn\.s|movt|movt\.d|movt\.s|movz|movz\.d|movz\.s|msub|mtc0|mtc1|mthi|mtlo|mul|mul\.d|mul\.s|mult|multu|neg\.d|neg\.s|nop|nor|or|ori|round\.w\.d|round\.w\.s|sb|sc|sdc1|sh|sll|sllv|slt|slti|sltiu|sltu|sqrt\.d|sqrt\.s|sra|srav|srl|srlv|sub|sub\.d|sub\.s|subu|sw|swc1|swl|swr|syscall|teq|teqi|tge|tgei|tgeiu|tgeu|tlt|tlti|tltiu|tltu|trunc\.w\.d|trunc\.w\.s|xor|xori)\b</string>
+			<string>\b(li|la|ld|ulh|ulhu|ulw|sd|ush|usw|move|lb|lbu|lh|lhu|ll|lui|lw|lwc1|lwl|lwr|mfc0|mfc1|mfhi|mflo|mov\.d|mov\.s|movf|movf\.d|movf\.s|movn|movn\.d|movn\.s|movt|movt\.d|movt\.s|movz|movz\.d|movz\.s|msub|mtc0|mtc1|mthi|mtlo|sw|swc1|swl|swr|sb|sc|sdc1|sh)\b</string>
+			<key>name</key>
+			<string>support.function.registers.mips</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b(b|beqz|bge|bgeu|bgt|bgtu|ble|bleu|blt|bltu|bnez|beq|bgez|bgezal|bgtz|blez|bltz|bltzal|bne|j|jal|jalr|jr)\b</string>
+			<key>name</key>
+			<string>support.function.jumps.mips</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b(seq|sge|sgeu|sgt|sgtu|sle|sleu|sne|mfc1\.d|l\.d|l\.s|s\.d|s\.s|bc1f|bc1t|break|c\.eq\.d|c\.eq\.s|c\.le\.d|c\.le\.s|c\.lt\.d|c\.lt\.s|clo|clz|cvt\.d\.s|cvt\.d\.w|cvt\.s\.d|cvt\.s\.w|cvt\.w\.d|cvt\.w\.s|madd|maddu|syscall|teq|teqi|tge|tgei|tgeiu|tgeu|tlt|tlti|tltiu|tltu)\b</string>
 			<key>name</key>
 			<string>support.function.mips</string>
 		</dict>
+
+
 		<dict>
 			<key>match</key>
 			<string>\.(ascii|asciiz|byte|data|double|float|half|kdata|ktext|space|text|word|set\s*(noat|at))\b</string>
@@ -41,6 +85,7 @@
 			<key>name</key>
 			<string>storage.modifier.mips</string>
 		</dict>
+		
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -55,6 +100,7 @@
 			<key>name</key>
 			<string>meta.function.label.mips</string>
 		</dict>
+
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -69,6 +115,23 @@
 			<key>name</key>
 			<string>variable.other.register.usable.by-number.mips</string>
 		</dict>
+
+		<!-- Regs by name -->
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.variable.mips</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(\$)(t[0-9]|s[0-7])\b</string>
+			<key>name</key>
+			<string>variable.other.register.usable.by-name.general.mips</string>
+		</dict>
+
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -83,6 +146,7 @@
 			<key>name</key>
 			<string>variable.other.register.usable.by-name.mips</string>
 		</dict>
+
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -97,6 +161,7 @@
 			<key>name</key>
 			<string>variable.other.register.reserved.mips</string>
 		</dict>
+
 		<dict>
 			<key>captures</key>
 			<dict>
@@ -111,6 +176,8 @@
 			<key>name</key>
 			<string>variable.other.register.usable.floating-point.mips</string>
 		</dict>
+
+
 		<dict>
 			<key>match</key>
 			<string>\b\d+\.\d+\b</string>

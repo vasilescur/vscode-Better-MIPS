@@ -2,7 +2,7 @@
     "name": "better-mips",
     "displayName": "Better MIPS Support",
     "description": "Provides better syntax highlighting and snippets for MIPS assembly language",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "publisher": "vasilescur",
     "homepage": "https://github.com/vasilescur/vscode-mips-support",
     "repository": {

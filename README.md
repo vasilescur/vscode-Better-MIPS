@@ -12,7 +12,7 @@ The extension comes with a color theme called `Nord MIPS`, based on the very pop
 
 
 ## Note:
-If you hate the snippets as much as I do, add this to your `settings.json`:
+To disable the snippets, add this to `settings.json`:
 
 ```json
 "[mips]": {
@@ -20,4 +20,4 @@ If you hate the snippets as much as I do, add this to your `settings.json`:
 }
 ```
 
-The extension is based on [this](https://github.com/kdarkhan/vscode-mips-support) more limited one.
+The extension is based on [this](https://github.com/kdarkhan/vscode-mips-support) one.
